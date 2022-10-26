@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Flask Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+ 
+<body>
+    <div class="header">
+        <h1>Poll Application</h1>
+    </div>
+    <hr>
+    <h2>Create a completely unique online poll</h2>
+    <p>Fill in the details below to create the perfect poll</p>
+
+    <center>
+        <form action="{{ url_for('load_poll') }}" method="POST">
+            Your poll's title<br>
+            <input type="text" placeholder="Title..." name="pollname"><br>
+            Answer 1<br>
+            <input type="text" placeholder="Answer 1..." name="answer1"><br>
+            Answer 2<br>
+            <input type="text" placeholder="Answer 2..." name="answer2"><br>
+            Answer 3<br>
+            <input type="text" placeholder="Answer 3..." name="answer3"><br>
+            <br>
+            Invite people by email adresses, who's going to vote<br>
+            <input type="email" placeholder="Email adresses, separate them with comma..." name="emails" multiple>
+            <h1>{{ warning }}</h1>
+            <button type="submit" class="btn btn-info">Create Poll</button>
+            <br>
+        </form>
+            <br>
+    </center>
+</body>

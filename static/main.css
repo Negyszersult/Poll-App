@@ -1,0 +1,49 @@
+body {
+    font-family: Verdana, sans-serif;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    background: #fcc4b5;
+}
+ 
+.header {
+    padding: 12px;
+    text-align: center;
+    background: #ec8d72;
+    color: black;
+    font-size: 15px;
+}
+ 
+h1, h2, h3 {
+    text-align: center;
+}
+ 
+p {
+    text-align: center;
+    font-size: 15px;
+    color: grey;
+}
+ 
+hr {
+    margin: 0;
+}
+
+input[type=text], select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=email], select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Flask Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Poll Application</h1>
+    </div>
+    <hr>
+
+    <center>
+        <h1>{{ poll_name }}</h1>
+        <br>
+        <div>
+        <input type="radio" id="radio1" name="answer">
+        <label for="radio1">{{ answer_1 }}</label>
+        </div>
+        <br>
+        <div>
+        <input type="radio" id="radio2" name="answer">
+        <label for="radio2">{{ answer_2 }}</label>
+        </div>
+        <br>
+        <div>
+        <input type="radio" id="radio3" name="answer">
+        <label for="radio3">{{ answer_3 }}</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-info">Send my vote</button>
+    </center>
+
+</body>
+
+</html>
